@@ -2,27 +2,27 @@ import requests
 from bs4 import BeautifulSoup
 import csv
 
-# URLs simuladas
 urls = [
-    "https://example.com/produto-a",
-    "https://example.com/produto-b"
+    "https://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html",
+    "https://books.toscrape.com/catalogue/tipping-the-velvet_999/index.html"
 ]
 
-headers = {"User-Agent": "Mozilla/5.0"}
+headers = {'User-Agent': 'Mozilla/5.0'}
 resultados = []
 
 for url in urls:
     r = requests.get(url, headers=headers)
     soup = BeautifulSoup(r.text, "html.parser")
 
-    nome = soup.title.text.strip() if soup.title else "Produto Desconhecido"
-    preco = "R$ 99,90"  # Preço simulado
+    nome = soup.find("h1").text.strip()
+    preco = soup.find("p", class_="price_color").text.strip().replace("£", "R$")
 
-    resultados.append({"Produto": nome, "Preço": preco, "URL": url})
+    resultados.append({"Produto": nome, "Preco": preco, "URL": url})
 
-with open("precos.csv", "w", newline="", encoding="utf-8") as f:
-    writer = csv.DictWriter(f, fieldnames=["Produto", "Preço", "URL"])
+with open("precos.csv", "w", newline="", encoding="windows-1252") as f:
+    writer = csv.DictWriter(f, fieldnames=["Produto", "Preco", "URL"])
     writer.writeheader()
     writer.writerows(resultados)
 
-print("✓ Arquivo precos.csv criado com sucesso.")
+print("✅ Arquivo 'precos.csv' criado com sucesso.")
+input("\nPressione Enter para sair...")
