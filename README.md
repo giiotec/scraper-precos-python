@@ -1,95 +1,141 @@
-# Scraper de Preços com Python
+![Status](https://img.shields.io/badge/status-em%20desenvolvimento-blue)
+![Licença](https://img.shields.io/badge/licença-MIT-green)
+![Python](https://img.shields.io/badge/Python-3.10%2B-yellow)
 
-Projeto desenvolvido por #Giovane Ramos# — voltado para prática de automação com scraping em Python. Este projeto simula a coleta de preços em sites e exporta os dados em formato `.csv`.
+<br>
+
+# Raspador de Preços em Python
+
+
+Script simples para extrair preços de sites e salvar em CSV. Ideal para testes com scraping, coleta de dados automatizada e manipulação de informações no Python.
+
+---
+
+## Visão Geral
+
+Projeto desenvolvido por **Giovane C Ramos** — voltado para a prática de automação com scraping.  
+O objetivo é simular a coleta de preços em sites reais e exportar os dados em formato `.csv`, organizando o projeto de forma modular e clara para facilitar o entendimento.
 
 ---
 
 ## Objetivo do Projeto
 
-Demonstrar a construção de um script funcional de web scraping utilizando bibliotecas padrão do Python. A ideia é mostrar domínio das etapas básicas:
+Demonstrar um **scraper funcional em Python puro**, cobrindo:
 
-- Fazer requisição a uma URL simulada
-- Coletar dados como nome e preço de produtos
-- Exportar os resultados para um arquivo `precos.csv`
-- Organizar o projeto de forma modular (com pastas e documentação)
+- Requisições HTTP a URLs simuladas  
+- Coleta de nome e preço de produtos  
+- Exportação dos resultados para `precos.csv`  
+- Organização do código com pastas, comentários e documentação  
 
 ---
 
 ## Tecnologias Utilizadas
 
-- Python 3
-- Requests
-- BeautifulSoup
-- CSV
+- **Python 3**  
+- **Requests** – requisições HTTP  
+- **BeautifulSoup (bs4)** – análise de HTML  
+- **CSV** – módulo nativo para exportar dados  
 
 ---
 
-## Estrutura de Pastas
+## Estrutura do Projeto
 
-```
-scraper-precos/
+```text
+raspador-precos-python/
 ├── README.md
 ├── precos.csv
 ├── src/
-│   └── scraper.py
+│   ├── scraper.py                 # versão funcional e limpa
+│   └── scraper_com_explicacoes.py # versão comentada (backup didático)
 ├── assets/
-│   ├── terminal_print.png
-│   ├── excel_print.png
-│   └── codigo_print.png
+│   ├── terminal_print.png         # execução no terminal
+│   ├── excel_print.png            # CSV aberto no Excel
+│   └── codigo_print.png           # trecho do código
 └── docs/
-    └── Projeto_Scraper.pdf
-```
+    └── Projeto_Scraper.pdf        # documentação explicativa (v1.1)
 
----
+```
 
 ## Como Executar o Projeto
 
-1. Clone o repositório:
+1. **Clone o repositório:**
 ```bash
-git clone https://github.com/seuusuario/scraper-precos.git
-cd scraper-precos
+git clone https://github.com/giiotec/raspador-precos-python.git
+cd raspador-precos-python
+
 ```
 
 2. Instale as dependências:
 ```bash
 pip install requests beautifulsoup4
+
 ```
 
 3. Execute o script:
 ```bash
 python src/scraper.py
+
 ```
 
-4. Verifique o arquivo `precos.csv` gerado com os dados.
+4. Verifique o resultado: o arquivo precos.csv será criado na raiz do projeto com os dados coletados.
 
 ---
 
 ## Prints do Projeto
+Imagens disponíveis em assets/:
 
-As imagens estão localizadas na pasta `assets/` e mostram o terminal, o arquivo `.csv` gerado e parte do código.
+terminal_print.png – execução do script
+
+excel_print.png – dados visualizados no Excel
+
+codigo_print.png – trecho do código em uso
 
 ---
 
 ## Documentação Extra
+O arquivo docs/Projeto_Scraper.pdf traz:
 
-O PDF `Projeto_Scraper.pdf` na pasta `/docs` detalha o projeto, o passo a passo e as explicações linha a linha.
+Explicação linha por linha do código
+
+Prints e observações visuais
+
+Versão atual: v1.1
+
+---
+
+## Aplicações Reais
+Monitoramento de preços em e-commerce
+
+Rotinas de coleta de dados para revenda
+
+Projeto de portfólio/freelance para mostrar domínio de scraping
 
 ---
 
 ## Autor
 
-**Giovane Ramos** — Apaixonado por automações, Python, soluções com IA e aprendizado constante.
+Giovane C Ramos – desenvolvedor em formação, apaixonado por Python, automações e soluções criativas.
 
 ---
 
-## Aplicações Reais
-
-Este projeto é ideal para exportação de dados. Pode ser adaptado para:
-
-- Monitoramento de preços em e-commerce
-- Criação de rotinas de coleta de dados para revenda
-- Projetos de entrada no portfólio de freelancer
+## Contribuições
+Sugestões ou correções são bem-vindas! Abra uma issue ou envie um pull request.
 
 ---
 
-### Se você curtiu, deixe uma estrela no repositório!
+[![Execução no terminal](assets/terminal_print.png)](assets/terminal_print.png)
+[![CSV no Excel](assets/excel_print.png)](assets/excel_print.png)
+[![Trecho do Código](assets/codigo_print.png)](assets/codigo_print.png)
+
+---
+
+ * Se este projeto te ajudou, deixe uma estrela!
+
+---
+
+## 🛡️ Licença
+
+Este projeto está sob licença [MIT](LICENSE).
+
+
+---
